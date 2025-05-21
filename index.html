@@ -3,28 +3,29 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>RandomRPG 3D</title>
+    <title>Random RPG 3D</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="stylesheet" href=cheesestickstudios.css>
+    <link rel="stylesheet" href="cheesestickstudios.css">
   </head>
   <body>
-    <div class="menuContainer">
-      <div id="unity-container" class="unity-desktop">
-        <canvas id="unity-canvas" width=960 height=600></canvas>
-        <div id="unity-loading-bar">
-          <div id="unity-logo"></div>
-          <div id="unity-progress-bar-empty">
-            <div id="unity-progress-bar-full"></div>
-          </div>
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
         </div>
-        <div id="unity-warning"> </div>
-        <div id="unity-footer">
-          <div id="unity-fullscreen-button"></div>
-        </div>
+      </div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-webgl-logo"></div>
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-build-title">RandomRPG2</div>
       </div>
     </div>
     <script>
+
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
       var loadingBar = document.querySelector("#unity-loading-bar");
@@ -59,9 +60,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Random RPG 3D EarlyAlphaTest.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Random RPG 3D EarlyAlphaTest.data.gz",
-        frameworkUrl: buildUrl + "/Random RPG 3D EarlyAlphaTest.framework.js.gz",
-        codeUrl: buildUrl + "/Random RPG 3D EarlyAlphaTest.wasm.gz",
+        dataUrl: buildUrl + "/Random RPG 3D EarlyAlphaTest.data",
+        frameworkUrl: buildUrl + "/Random RPG 3D EarlyAlphaTest.framework.js",
+        codeUrl: buildUrl + "/Random RPG 3D EarlyAlphaTest.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "RandomRPG2",
